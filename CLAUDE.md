@@ -12,16 +12,16 @@
   moment the checks pass and the review approves — with nobody looking at it again. That is the user's call rather than
   a default to assume either way, so when they have not said, ask before opening it, and leave auto-merge off until they
   answer.
-- **Show the change in screenshots.** A pull request that changes anything the page draws carries screenshots of it, so
-  a reviewer can judge it without checking the branch out. The branch's come from a real build — `pnpm fetch:repos`,
-  which lists the live repos into `repos.json`, then `pnpm build` and `pnpm preview` — and `master`'s from
-  https://spence.com.au, which serves it. Show each state the change adds, and at phone width where the layout differs
-  there. A bug fix shows the page before and after, the broken state beside the fixed one, so a reviewer sees both what
-  was wrong and that it no longer is. Upload each image through the undocumented endpoint GitHub's web editor uses,
+- **Show the change in screenshots.** A pull request that changes anything the project draws carries screenshots of it,
+  so a reviewer can judge it without checking the branch out. The branch's come from a real build of it, and `master`'s
+  from wherever it is deployed, or from a build of `master` where it is not. Show each state the change adds, and at
+  phone width where the layout differs there. A bug fix shows it before and after, the broken state beside the fixed
+  one, so a reviewer sees both what was wrong and that it no longer is. Upload each image through the undocumented
+  endpoint GitHub's web editor uses,
   [described here](https://island94.org/2026/08/programmatically-upload-attachments-to-github-issues-pull-requests-comments),
   and embed the URL it returns in the PR body, so nothing lands on the branch. The body rather than a comment, because
   the body is what a reviewer reads first and the one place that can always show the current state: when a later push
-  changes what the page draws, take the screenshots again and replace them there, rather than leaving the old set in
+  changes what the project draws, take the screenshots again and replace them there, rather than leaving the old set in
   place or posting a new set in a comment.
 
   ```bash
