@@ -16,9 +16,9 @@
   carries screenshots of it, so a reviewer can judge it without checking the branch out. A project with nothing to look
   at, such as a CLI or a library, skips this. The branch's screenshots come from a real build of the project, and
   `master`'s from wherever `master` is deployed, or from a build of `master` where nothing deploys it. Show each state
-  the change adds, and at phone width where the layout differs there. A bug fix shows it before and after, the broken
-  state beside the fixed one, so a reviewer sees both what was wrong and that it no longer is. Upload each image through
-  the undocumented endpoint GitHub's web editor uses,
+  the change adds, and at phone width where the layout differs there. A bug fix shows the project before and after, the
+  broken state beside the fixed one, so a reviewer sees both what was wrong and that it no longer is. Upload each image
+  through the undocumented endpoint GitHub's web editor uses,
   [described here](https://island94.org/2026/08/programmatically-upload-attachments-to-github-issues-pull-requests-comments),
   and embed the URL it returns in the PR body, so nothing lands on the branch. The body rather than a comment, because
   the body is what a reviewer reads first and the one place that can always show the current state: when a later push
